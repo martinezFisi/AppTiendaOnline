@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.martinez.apptiendaonline.LoginActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:textSize="20dp"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:textSize="20dp"
+        android:inputType="textPassword"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="205dp"
+        android:layout_marginBottom="5dp"
+        android:text="¿Olvidó su contraseña?"
+        />
+
+    <Button
+        android:text="ENTRAR"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="19dip"
+        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:drawablePadding="-70dip"
+        android:paddingLeft="90dip"
+        android:paddingRight="26dip"
+        android:singleLine="true"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ó"
+        android:textSize="20dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        />
+
+    <Button
+        android:text="FACEBOOK"
+        android:layout_width="300dip"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:textSize="19dip"
+        android:drawableLeft="@drawable/facebook_icon"
+        android:drawablePadding="-40dip"
+        android:paddingLeft="60dip"
+        android:paddingRight="26dip"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+
+        />
+
+    <Button
+        android:text="GOOGLE"
+        android:layout_width="300dip"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:textSize="19dip"
+        android:drawableLeft="@drawable/google_icon"
+        android:drawablePadding="-50dip"
+        android:paddingLeft="70dip"
+        android:paddingRight="26dip"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+
+        />
+
+</LinearLayout>
