@@ -15,8 +15,10 @@ public class SignInActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.appBarSignIn);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.appbarSignIn);
         setSupportActionBar( toolbar );
+        //Habilitamos el boton regresar en el toolbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 

@@ -23,6 +23,7 @@
         />
 
     <Button
+        android:id="@+id/signinHomeButton"
         android:text="REGISTRARSE"
         android:layout_width="300dip"
         android:layout_height="55dp"
@@ -56,6 +57,7 @@
         />
 
     <Button
+        android:id="@+id/loginHomeButton"
         android:text="ENTRAR"
         android:layout_width="300dip"
         android:layout_height="wrap_content"

@@ -13,9 +13,10 @@
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/appBarSignIn"
+        android:id="@+id/appbarSignIn"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
@@ -31,6 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         >
 
         <EditText
@@ -56,6 +59,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:hint="Correo Electrónico"
         android:textSize="20dp"
         android:inputType="textEmailAddress"
@@ -64,6 +69,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:hint="Confirmar Correo Electrónico"
         android:textSize="20dp"
         android:inputType="textEmailAddress"
@@ -72,6 +79,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:hint="Contraseña"
         android:textSize="20dp"
         android:inputType="textPassword"
