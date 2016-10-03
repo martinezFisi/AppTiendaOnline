@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Grupo principal de opciones-->
+    <group android:checkableBehavior="single" > <!--Solo puede seleccionarse una opción a la vez-->
+        <item
+            android:id="@+id/niñosItem"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Niños"
+            />
+        <item
+            android:id="@+id/niñasItem"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Niñas"
+            />
+        <item
+            android:id="@+id/bebesItem"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Bebés"
+            />
+    </group>
+
+    <!--Grupo secundario de opciones-->
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Otras opciones">
+
+        <menu>
+            <item
+                android:id="@+id/buscarItem"
+                android:icon="@android:drawable/ic_menu_search"
+                android:title="Buscar" />
+            <item
+                android:id="@+id/catalogoItem"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:title="Catálogo" />
+            <item
+                android:id="@+id/carritoItem"
+                android:icon="@android:drawable/ic_dialog_map"
+                android:title="Carrito de compras" />
+            <item
+                android:id="@+id/comprasEnProcesoItem"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="Buscar" />
+            <item
+                android:id="@+id/historialComprasItem"
+                android:icon="@android:drawable/ic_menu_myplaces"
+                android:title="Historial de compras" />
+            <item
+                android:id="@+id/miPerfilItem"
+                android:icon="@android:drawable/ic_menu_view"
+                android:title="Mi perfil" />
+            <item
+                android:id="@+id/encontrarTiendaItem"
+                android:icon="@android:drawable/ic_menu_mapmode"
+                android:title="Encontrar una tienda" />
+        </menu>
+
+    </item>
+
+</menu>
