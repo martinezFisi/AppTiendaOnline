@@ -5,9 +5,34 @@
     tools:context=".HomeRetailFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ViewAnimator
+        android:id="@+id/viewAnimator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HomeRetailFragment" />
+        android:layout_height="200dp">
+
+        <ImageButton
+            android:id="@+id/slide1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/navheader"
+            />
+
+        <ImageButton
+            android:id="@+id/slide2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/navheader"
+            />
+
+        <ImageButton
+            android:id="@+id/slide3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/navheader"
+            />
+
+
+
+    </ViewAnimator>
 
 </FrameLayout>
