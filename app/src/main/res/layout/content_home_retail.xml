@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Este layout va dentro de activity_home_retail, layout donde la raiz es el
+    navigation drawer-->
+<!--Este layout representa la verdadera actividad-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <!--Toolbar de la actividad HomeRetailActivity-->
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,7 +22,12 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
-
     </android.support.v7.widget.Toolbar>
+
+    <!--FrameLayout con el que contendremos todos los fragments intercambiables-->
+    <FrameLayout
+        android:id="@+id/content_frame_of_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
 </LinearLayout>

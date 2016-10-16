@@ -4,17 +4,22 @@
     <!--Grupo principal de opciones-->
     <group android:checkableBehavior="single" > <!--Solo puede seleccionarse una opción a la vez-->
         <item
-            android:id="@+id/niñosItem"
+            android:id="@+id/menu_homeRetailItem"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Home Retail"
+            />
+        <item
+            android:id="@+id/menu_boysCategoryItem"
             android:icon="@android:drawable/ic_menu_agenda"
             android:title="Niños"
             />
         <item
-            android:id="@+id/niñasItem"
+            android:id="@+id/menu_girlsCategoryItem"
             android:icon="@android:drawable/ic_menu_agenda"
             android:title="Niñas"
             />
         <item
-            android:id="@+id/bebesItem"
+            android:id="@+id/menu_babiesCategoryItem"
             android:icon="@android:drawable/ic_menu_agenda"
             android:title="Bebés"
             />
@@ -27,31 +32,31 @@
 
         <menu>
             <item
-                android:id="@+id/buscarItem"
+                android:id="@+id/menu_searchItem"
                 android:icon="@android:drawable/ic_menu_search"
                 android:title="Buscar" />
             <item
-                android:id="@+id/catalogoItem"
+                android:id="@+id/menu_catalogItem"
                 android:icon="@android:drawable/ic_menu_agenda"
                 android:title="Catálogo" />
             <item
-                android:id="@+id/carritoItem"
+                android:id="@+id/menu_shoppingCartItem"
                 android:icon="@android:drawable/ic_dialog_map"
                 android:title="Carrito de compras" />
             <item
-                android:id="@+id/comprasEnProcesoItem"
+                android:id="@+id/menu_shoppingProcessItem"
                 android:icon="@android:drawable/ic_menu_send"
                 android:title="Buscar" />
             <item
-                android:id="@+id/historialComprasItem"
+                android:id="@+id/menu_shoppingHistoryItem"
                 android:icon="@android:drawable/ic_menu_myplaces"
                 android:title="Historial de compras" />
             <item
-                android:id="@+id/miPerfilItem"
+                android:id="@+id/menu_myProfileItem"
                 android:icon="@android:drawable/ic_menu_view"
                 android:title="Mi perfil" />
             <item
-                android:id="@+id/encontrarTiendaItem"
+                android:id="@+id/menu_findStoreItem"
                 android:icon="@android:drawable/ic_menu_mapmode"
                 android:title="Encontrar una tienda" />
         </menu>
