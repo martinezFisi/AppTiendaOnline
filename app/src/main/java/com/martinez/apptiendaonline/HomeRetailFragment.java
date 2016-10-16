@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
+
+import com.martinez.apptiendaonline.Adapters.CategoryAdapter;
+import com.martinez.apptiendaonline.Model.Category;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -26,10 +30,21 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
     private ImageButton slide1;
     private ImageButton slide2;
     private ImageButton slide3;
-
     //Timer
     Timer timer = null;
     private int count = 0;
+
+    //ListView
+    private ListView categoryListView;
+    //Adapter
+    private CategoryAdapter adapter;
+    //Categories
+    private Category categories[] = new Category[]
+            {
+                    new Category( "Boys", "Clothes for boys", null, R.drawable.navheader ),
+                    new Category( "Girls", "Clothes for girls", null, R.drawable.item_1 ),
+                    new Category( "Boys", "Clothes for boys", null, R.drawable.item_2 )
+            };
 
 
     public HomeRetailFragment()
@@ -52,8 +67,6 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
         slide1.setOnClickListener(this);
         slide2.setOnClickListener(this);
         slide3.setOnClickListener(this);
-
-
 
         //Animaciones
         slide_in_left = AnimationUtils.loadAnimation( getContext() ,android.R.anim.slide_in_left);
@@ -100,6 +113,11 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
 
         , 0, 2000);
 
+
+        //ListView
+        categoryListView = (ListView)root.findViewById( R.id.categoryListView );
+        adapter = new CategoryAdapter( getContext(), categories );
+        categoryListView.setAdapter( adapter );
 
 
         return root;
