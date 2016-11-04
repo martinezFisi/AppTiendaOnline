@@ -2,6 +2,7 @@ package com.martinez.apptiendaonline;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import java.util.TimerTask;
 
 public class HomeRetailFragment extends Fragment implements View.OnClickListener
 {
+    public static String title = "Home";
     //ViewAnimator
     private ViewAnimator viewAnimator;
     //Animaciones
@@ -50,6 +52,13 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
     public HomeRetailFragment()
     {
 
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        ( (AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(title);
     }
 
     @Override
@@ -138,5 +147,8 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
                 Toast.makeText(getActivity().getApplicationContext(), "Presionaste slide 3", Toast.LENGTH_SHORT).show();
                 break;
         }
+
+
+
     }
 }

@@ -3,6 +3,7 @@ package com.martinez.apptiendaonline;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +14,19 @@ import android.view.ViewGroup;
  */
 public class BabiesCategoryFragment extends Fragment
 {
-
+    public static String title = "Bebés";
 
     public BabiesCategoryFragment()
     {
         // Required empty public constructor
     }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        ( (AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(title);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
