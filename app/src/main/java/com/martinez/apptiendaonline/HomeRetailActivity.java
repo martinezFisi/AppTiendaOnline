@@ -149,14 +149,18 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
     {
         if( getSupportFragmentManager().getBackStackEntryCount() > 0 )
         {
+            //Obtiene el fragment que está hasta arriba en la pila
             getSupportFragmentManager().popBackStack();
             getSupportActionBar().setTitle( "" );
 
             String mensaje="";
+            //Recorremos todos los fragments almacenados en la pila
             for( int i=0; i < getSupportFragmentManager().getFragments().size(); i++ )
             {
+                //Si el fragment no es nulo
                 if( getSupportFragmentManager().getFragments().get(i) != null )
                 {
+                    //Obtenemos el tag de ese fragment
                     mensaje = mensaje + getSupportFragmentManager().getFragments().get(i).getTag()+"\n";
 
                     /*if( getSupportFragmentManager().getFragments().get(i).isVisible() )

@@ -47,7 +47,7 @@ public class CatalogFragment extends Fragment implements AdapterView.OnItemClick
 
     }
 
-    @Override
+    @Override//Evento del ciclo de vida del fragment en donde se permite la iteraccion del usuario
     public void onResume()
     {
         super.onResume();
