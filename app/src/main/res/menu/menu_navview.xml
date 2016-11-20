@@ -5,22 +5,22 @@
     <group android:checkableBehavior="single" > <!--Solo puede seleccionarse una opción a la vez-->
         <item
             android:id="@+id/menu_homeRetailItem"
-            android:icon="@android:drawable/ic_menu_agenda"
+            android:icon="@drawable/ic_home_black_18dp"
             android:title="Home Retail"
             />
         <item
             android:id="@+id/menu_boysCategoryItem"
-            android:icon="@android:drawable/ic_menu_agenda"
+            android:icon="@drawable/ic_human_black_18dp"
             android:title="Niños"
             />
         <item
             android:id="@+id/menu_girlsCategoryItem"
-            android:icon="@android:drawable/ic_menu_agenda"
+            android:icon="@drawable/ic_human_female_black_18dp"
             android:title="Niñas"
             />
         <item
             android:id="@+id/menu_babiesCategoryItem"
-            android:icon="@android:drawable/ic_menu_agenda"
+            android:icon="@drawable/ic_baby_buggy_black_18dp"
             android:title="Bebés"
             />
     </group>
@@ -37,27 +37,24 @@
                 android:title="Buscar" />
             <item
                 android:id="@+id/menu_catalogItem"
-                android:icon="@android:drawable/ic_menu_agenda"
+                android:icon="@drawable/ic_library_books_black_18dp"
                 android:title="Catálogo" />
             <item
                 android:id="@+id/menu_shoppingCartItem"
-                android:icon="@android:drawable/ic_dialog_map"
+                android:icon="@drawable/ic_cart_outline_black_18dp"
                 android:title="Carrito de compras" />
-            <item
-                android:id="@+id/menu_shoppingProcessItem"
-                android:icon="@android:drawable/ic_menu_send"
-                android:title="Buscar" />
+
             <item
                 android:id="@+id/menu_shoppingHistoryItem"
-                android:icon="@android:drawable/ic_menu_myplaces"
+                android:icon="@drawable/ic_shopping_black_18dp"
                 android:title="Historial de compras" />
             <item
                 android:id="@+id/menu_myProfileItem"
-                android:icon="@android:drawable/ic_menu_view"
+                android:icon="@drawable/ic_account_black_18dp"
                 android:title="Mi perfil" />
             <item
                 android:id="@+id/menu_findStoreItem"
-                android:icon="@android:drawable/ic_menu_mapmode"
+                android:icon="@drawable/ic_store_black_18dp"
                 android:title="Encontrar una tienda" />
         </menu>
 

@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.martinez.apptiendaonline.PayFragment"
+    android:orientation="vertical"
+    android:isScrollContainer="true"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#262626"
+                android:paddingTop="20dp"
+
+                android:paddingBottom="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precio de compra: \t\t\t\t\t\t S/.200"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precio de envío: \t\t\t\t\t\t\t\t\t S/.15"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@android:color/darker_gray"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precio de compra: \t\t\t\t\t\t S/.215"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pagar con:"
+                    android:textSize="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:layout_weight="2"
+                    >
+
+
+                    <Button
+                        android:textAllCaps="false"
+                        android:text="Tarjeta de Crédito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dip"
+                        android:drawableTop="@drawable/ic_credit_card_black_18dp"
+                        android:singleLine="true"
+                        android:layout_weight="0.4"
+                        />
+
+                    <Button
+                        android:textAllCaps="false"
+                        android:text="PayPal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dip"
+                        android:drawableTop="@drawable/ic_credit_card_black_18dp"
+                        android:singleLine="true"
+                        android:layout_weight="1.5"
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Tarjeta de crédito"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:background="#262626"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Número de tarjeta de crédito"
+                    android:textSize="20dp"
+
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Código de seguridad(3 ó 4 dígitos)"
+                    android:textSize="20dp"
+
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Código postal de la tarjeta"
+                    android:textSize="20dp"
+
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableRight="@drawable/ic_coin_black_18dp"
+                    android:drawablePadding="-60dp"
+                    android:paddingRight="90dp"
+                    android:text="Realizar pago"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

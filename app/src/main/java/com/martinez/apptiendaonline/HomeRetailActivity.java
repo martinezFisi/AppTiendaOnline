@@ -37,7 +37,7 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
         navigationView.setNavigationItemSelectedListener(this);
 
         //Añadimos al toolbar el icono del navigation drawer en el lado izquierdo
-        getSupportActionBar().setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_menu_overflow_material);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_white_18dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Mostramos como fragment Home como pantalla inicial
@@ -100,15 +100,13 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
                 fragment = new CatalogFragment();
                 title = CatalogFragment.title;
                 fragmentTransaction = true;
-                Toast.makeText( getApplicationContext(), "Presionaste Catálogo", Toast.LENGTH_SHORT ).show();
+                //Toast.makeText( getApplicationContext(), "Presionaste Catálogo", Toast.LENGTH_SHORT ).show();
                 break;
 
             case R.id.menu_shoppingCartItem:
-                Toast.makeText( getApplicationContext(), "Presionaste Carrito de Compras", Toast.LENGTH_SHORT ).show();
-                break;
-
-            case R.id.menu_shoppingProcessItem:
-                Toast.makeText( getApplicationContext(), "Presionaste Compras en Proceso", Toast.LENGTH_SHORT ).show();
+                fragment = new ShoppingCartFragment();
+                title = ShoppingCartFragment.title;
+                fragmentTransaction = true;
                 break;
 
             case R.id.menu_shoppingHistoryItem:
@@ -116,7 +114,9 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
                 break;
 
             case R.id.menu_myProfileItem:
-                Toast.makeText( getApplicationContext(), "Presionaste Mi Perfil", Toast.LENGTH_SHORT ).show();
+                fragment = new PerfilFragment();
+                title = PerfilFragment.title;
+                fragmentTransaction = true;
                 break;
 
             case R.id.menu_findStoreItem:
@@ -170,7 +170,7 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
 
             }
 
-            Toast.makeText( getApplicationContext(), mensaje+getSupportFragmentManager().getFragments().size(), Toast.LENGTH_LONG ).show();
+            //Toast.makeText( getApplicationContext(), mensaje+getSupportFragmentManager().getFragments().size(), Toast.LENGTH_LONG ).show();
         }
         else
             super.onBackPressed();

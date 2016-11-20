@@ -14,7 +14,7 @@
     <item
         android:id="@+id/carritoIconButton"
         android:title="Carrito de compra"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@drawable/ic_cart_outline_white_18dp"
         android:orderInCategory="100"
         app:showAsAction="always"
         />

@@ -15,7 +15,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/lead_photo_10"
+        android:src="@drawable/manga_cero_nina_redondeado"
         />
 
     <TextView

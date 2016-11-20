@@ -55,12 +55,13 @@
 
     <Button
         android:id="@+id/entrarButton"
-        android:text="ENTRAR"
-        android:layout_width="300dip"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="19dip"
-        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:drawableLeft="@drawable/ic_login_black_18dp"
         android:drawablePadding="-70dip"
         android:paddingLeft="90dip"
         android:paddingRight="26dip"
@@ -80,8 +81,9 @@
         />
 
     <Button
-        android:text="FACEBOOK"
-        android:layout_width="300dip"
+        android:text="Facebook"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"
@@ -96,8 +98,9 @@
         />
 
     <Button
-        android:text="GOOGLE"
-        android:layout_width="300dip"
+        android:text="Google"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"

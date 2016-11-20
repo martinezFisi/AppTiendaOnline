@@ -5,9 +5,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
@@ -17,7 +19,7 @@ import com.martinez.apptiendaonline.Model.Prenda;
 import com.martinez.apptiendaonline.Model.SubCategory;
 
 
-public class ClothesFragment extends Fragment
+public class ClothesFragment extends Fragment implements AdapterView.OnItemClickListener
 {
     public static String title = "Prendas";
     //GridView
@@ -27,18 +29,18 @@ public class ClothesFragment extends Fragment
     //SubCategories
     private Prenda prendas[] = new Prenda[]
             {
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
-                    new Prenda( "Polo con cuello", R.drawable.ford_mondeo, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.polo_ni_os, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
+                    new Prenda( "Polo con cuello", R.drawable.manga_cero_ni_as, "", 20 ),
             };
 
 
@@ -73,8 +75,37 @@ public class ClothesFragment extends Fragment
         //Adapter
         adapter = new PrendaAdapter( getContext(), prendas );
         gridView.setAdapter( adapter );
+        gridView.setOnItemClickListener(this);
 
         return root;
     }
 
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+    {
+        String title="";
+        //Fragment
+        Fragment fragment = null;
+        boolean fragmentTransaction = false;
+
+        Log.d("Log","Presionaste "+position);
+
+        switch ( position )
+        {
+            case 0:
+                fragment = new ClothesDetailsFragment();
+                title = ClothesDetailsFragment.title;
+                fragmentTransaction = true;
+                break;
+        }
+
+        if( fragmentTransaction )
+        {
+            //Cambiamos de fragment
+            ( (AppCompatActivity)getActivity() ).getSupportFragmentManager().beginTransaction().replace( R.id.content_frame_of_fragments, fragment ).addToBackStack( title ).commit();
+            ( (AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(title);
+        }
+    }
 }

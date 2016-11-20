@@ -43,9 +43,9 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
     //Categories
     private Category categories[] = new Category[]
             {
-                    new Category( "Boys", "Clothes for boys", null, R.drawable.navheader ),
-                    new Category( "Girls", "Clothes for girls", null, R.drawable.item_1 ),
-                    new Category( "Boys", "Clothes for boys", null, R.drawable.item_2 )
+                    new Category( "Boys", "Clothes for boys", null, R.drawable.zzz_hb_header_kidsshop ),
+                    new Category( "Girls", "Clothes for girls", null, R.drawable.zzz_hb_header_kidsshop ),
+                    new Category( "Boys", "Clothes for boys", null, R.drawable.header_ingles_ninos_y_jovenes )
             };
 
 
@@ -92,9 +92,10 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
                     @Override
                     public void run()
                     {
-                        viewAnimator.postDelayed(new Runnable() {
+                        viewAnimator.postDelayed( new Runnable() {
                             @Override
-                            public void run() {
+                            public void run()
+                            {
                                 viewAnimator.setDisplayedChild(count);
                                 count++;
                                 if(count>2)

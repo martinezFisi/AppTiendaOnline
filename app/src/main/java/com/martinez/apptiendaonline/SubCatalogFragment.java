@@ -26,11 +26,11 @@ public class SubCatalogFragment extends Fragment implements AdapterView.OnItemCl
     //SubCategories
     private SubCategory subCategories[] = new SubCategory[]
             {
-                    new SubCategory( "Polos","Prendas de mangas cortas", null, R.drawable.lead_photo_10 ),
-                    new SubCategory( "Pantalones","Prendas de mangas cortas", null, R.drawable.lead_photo_10 ),
-                    new SubCategory( "Zapatos","Prendas de mangas cortas", null, R.drawable.lead_photo_10 ),
-                    new SubCategory( "Ropa Interior","Prendas de mangas cortas", null, R.drawable.lead_photo_10 ),
-                    new SubCategory( "Gorras","Prendas de mangas cortas", null, R.drawable.lead_photo_10 ),
+                    new SubCategory( "Polos","Prendas de mangas cortas", null, R.drawable.polo_redondeado ),
+                    new SubCategory( "Pantalones","Prendas de mangas cortas", null, R.drawable.manga_cero_nina_redondeado ),
+                    new SubCategory( "Zapatos","Prendas de mangas cortas", null, R.drawable.polo_redondeado ),
+                    new SubCategory( "Ropa Interior","Prendas de mangas cortas", null, R.drawable.manga_cero_nina_redondeado ),
+                    new SubCategory( "Gorras","Prendas de mangas cortas", null, R.drawable.polo_redondeado ),
             };
 
 

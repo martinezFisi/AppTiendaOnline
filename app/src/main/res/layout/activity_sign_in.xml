@@ -87,12 +87,13 @@
         />
 
     <Button
-        android:text="REGISTRARSE"
-        android:layout_width="300dip"
+        android:text="Registrarse"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"
-        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:drawableLeft="@drawable/ic_pencil_black_18dp"
         android:drawablePadding="-40dip"
         android:paddingLeft="60dip"
         android:paddingRight="26dip"
@@ -112,8 +113,9 @@
         />
 
     <Button
-        android:text="FACEBOOK"
-        android:layout_width="300dip"
+        android:text="Facebook"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"
@@ -128,8 +130,9 @@
         />
 
     <Button
-        android:text="GOOGLE"
-        android:layout_width="300dip"
+        android:text="Google"
+        android:textAllCaps="false"
+        android:layout_width="330dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"

@@ -9,27 +9,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:gravity="top|center"
-    tools:context="com.martinez.apptiendaonline.HomeActivity">
+    tools:context="com.martinez.apptiendaonline.HomeActivity"
+    android:background="@color/colorPrimary"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EspainEspinoza\n\t\t\t\t\t\t\tRetail"
+        android:text="EspainEspinoza"
         android:layout_gravity="center"
         android:textSize="30dp"
 
         android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retail\t"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:drawableRight="@drawable/ic_shopping_black_18dp"
         android:layout_marginBottom="30dp"
         />
 
     <Button
         android:id="@+id/signinHomeButton"
-        android:text="REGISTRARSE"
+        android:text="Registrarse"
+        android:textAllCaps="false"
         android:layout_width="300dip"
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:textSize="19dip"
-        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:drawableLeft="@drawable/ic_pencil_black_18dp"
         android:drawablePadding="-40dip"
         android:paddingLeft="60dip"
         android:paddingRight="26dip"
@@ -58,12 +69,13 @@
 
     <Button
         android:id="@+id/loginHomeButton"
-        android:text="ENTRAR"
+        android:text="Entrar"
+        android:textAllCaps="false"
         android:layout_width="300dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="19dip"
-        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:drawableLeft="@drawable/ic_login_black_18dp"
         android:drawablePadding="-70dip"
         android:paddingLeft="90dip"
         android:paddingRight="26dip"
