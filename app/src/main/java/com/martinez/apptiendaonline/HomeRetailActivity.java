@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -52,6 +53,7 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
     {
         //Inflamos el appbar con el menu y sus elementos si están presentes
         getMenuInflater().inflate( R.menu.menu_appbar_home_retail, menu);
+
         return true;
     }
 
@@ -110,7 +112,9 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
                 break;
 
             case R.id.menu_shoppingHistoryItem:
-                Toast.makeText( getApplicationContext(), "Presionaste Historial de Compras", Toast.LENGTH_SHORT ).show();
+                fragment = new ShoppingHistoryFragment();
+                title = ShoppingHistoryFragment.title;
+                fragmentTransaction = true;
                 break;
 
             case R.id.menu_myProfileItem:
@@ -174,6 +178,33 @@ public class HomeRetailActivity extends AppCompatActivity implements NavigationV
         }
         else
             super.onBackPressed();
+
+    }
+
+
+    public void onClickCarrito(MenuItem item)
+    {
+        String title="";
+        //Flag para saber si se desea cambio de fragment
+        boolean fragmentTransaction = false;
+        //Inicializamos un fragment vacío, este contendrá a los diferentes fragments que hiremos usando
+        Fragment fragment = null;
+
+        fragment = new ShoppingCartFragment();
+        title = ShoppingCartFragment.title;
+        fragmentTransaction = true;
+
+        //Si hubo un pedido de cambio de fragment
+        if( fragmentTransaction )
+        {
+            //Cambiamos de fragment
+            getSupportFragmentManager().beginTransaction().replace( R.id.content_frame_of_fragments, fragment, title ).addToBackStack( title ).commit();
+            //Marcamos como seleccionada la opción elegida del menú lateral
+            //item.setChecked(true);
+            //Colocamos en el toolbar el título del fragment seleccionado
+            getSupportActionBar().setTitle( title );
+
+        }
 
     }
 

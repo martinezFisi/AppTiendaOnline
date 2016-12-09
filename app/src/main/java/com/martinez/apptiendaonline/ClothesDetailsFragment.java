@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 import java.util.Timer;
@@ -45,6 +46,8 @@ public class ClothesDetailsFragment extends Fragment implements View.OnClickList
 
     //Buttons
     private Button comprarArticuloButton;
+
+    private Button agregarAlCarritoButton;
 
     public ClothesDetailsFragment()
     {
@@ -86,6 +89,9 @@ public class ClothesDetailsFragment extends Fragment implements View.OnClickList
         //Buttons
         comprarArticuloButton = (Button)root.findViewById(R.id.comprarArticuloButton);
         comprarArticuloButton.setOnClickListener(this);
+
+        //agregarAlCarritoButton = (Button)root.findViewById(R.id.agregarAlCarritoButton);
+        //agregarAlCarritoButton.setOnClickListener(this);
 
         //Referenciamos los views
         viewAnimator = (ViewAnimator)root.findViewById(R.id.clothesDetailsViewAnimator);
@@ -140,13 +146,20 @@ public class ClothesDetailsFragment extends Fragment implements View.OnClickList
         Fragment fragment = null;
         boolean fragmentTransaction = false;
 
-        switch(v.getId())
+        switch( v.getId() )
         {
             case R.id.comprarArticuloButton:
-                fragment = new PayFragment();
-                title = PayFragment.title;
-                fragmentTransaction = true;
+                Toast.makeText( getContext(), "Prenda agregada al carrito", Toast.LENGTH_SHORT ).show();
+
                 break;
+
+            /*
+            case R.id.agregarAlCarritoButton:
+                fragment = new ShoppingCartFragment();
+                title = ShoppingCartFragment.title;
+                fragmentTransaction = true;
+                break;*/
+
         }
 
         if( fragmentTransaction )

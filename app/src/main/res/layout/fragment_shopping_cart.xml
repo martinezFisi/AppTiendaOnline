@@ -5,166 +5,191 @@
     android:orientation="vertical"
     tools:context="com.martinez.apptiendaonline.ShoppingCartFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#262626"
-        android:paddingTop="20dp"
-
-        android:paddingBottom="20dp"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="4"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar a:"
-                android:textSize="18dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                />
+                android:orientation="vertical"
+                android:background="#262626"
+                android:paddingTop="20dp"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jr. Huánuco 26 Lima"
-                android:textSize="16dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                />
+                android:paddingBottom="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enviar a:"
+                        android:textSize="18dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jr. Huánuco 26 Lima"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="Editar"
+                        android:textAllCaps="false"
+                        android:layout_weight="1"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio de la compra:"
+                        android:textSize="18dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S/. 125.00"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costo por envío:"
+                        android:textSize="18dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\t\t\tS/.   15.00"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total de la compra:"
+                        android:textSize="18dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\t\tS/.   140.00"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/shoppingCartListView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+            </ListView>
 
             <Button
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="Editar"
+                android:id="@+id/realizarPagoCarritoButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Realizar pago"
+                android:textSize="20dp"
                 android:textAllCaps="false"
-                android:layout_weight="1"
-                />
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="4"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Precio de la compra:"
-                android:textSize="18dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="S/. 125.00"
-                android:textSize="16dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="1"
                 />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="4"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Costo por envío:"
-                android:textSize="18dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="\t\t\tS/.   15.00"
-                android:textSize="16dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="4"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total de la compra:"
-                android:textSize="18dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="\t\tS/.   140.00"
-                android:textSize="16dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/shoppingCartListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ListView>
-
-
-
+    </ScrollView>
+    
 
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -21,7 +22,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class HomeRetailFragment extends Fragment implements View.OnClickListener
+public class HomeRetailFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener
 {
     public static String title = "Home";
     //ViewAnimator
@@ -128,6 +129,7 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
         categoryListView = (ListView)root.findViewById( R.id.categoryListView );
         adapter = new CategoryAdapter( getContext(), categories );
         categoryListView.setAdapter( adapter );
+        categoryListView.setOnItemClickListener(this);
 
 
         return root;
@@ -147,9 +149,34 @@ public class HomeRetailFragment extends Fragment implements View.OnClickListener
             case R.id.slide3:
                 Toast.makeText(getActivity().getApplicationContext(), "Presionaste slide 3", Toast.LENGTH_SHORT).show();
                 break;
+
+
         }
 
+    }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+    {
+        String title="";
+        //Fragment
+        Fragment fragment = null;
+        boolean fragmentTransaction = false;
 
+        switch ( position )
+        {
+            case 0:
+                fragment = new SubCatalogFragment();
+                title = SubCatalogFragment.title;
+                fragmentTransaction = true;
+                break;
+        }
+
+        if( fragmentTransaction )
+        {
+            //Cambiamos de fragment
+            ( (AppCompatActivity)getActivity() ).getSupportFragmentManager().beginTransaction().replace( R.id.content_frame_of_fragments, fragment ).addToBackStack( title ).commit();
+            ( (AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(title);
+        }
     }
 }

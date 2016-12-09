@@ -8,22 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.martinez.apptiendaonline.Adapters.ItemShoppingCartAdapter;
-import com.martinez.apptiendaonline.Adapters.PrendaAdapter;
+import com.martinez.apptiendaonline.Adapters.ItemShoppingHistoryAdapter;
 import com.martinez.apptiendaonline.Model.Prenda;
 
 
-public class ShoppingCartFragment extends Fragment implements AdapterView.OnItemClickListener, View.OnClickListener
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ShoppingHistoryFragment extends Fragment implements AdapterView.OnItemClickListener
 {
-    public static String title = "Carrito de compras";
+    public static String title = "Historial de Compras";
     //GridView
-    private ListView shoppingCartListView;
+    private ListView shoppingHistoryListView;
     //Adaptador
-    private ItemShoppingCartAdapter adapter;
+    private ItemShoppingHistoryAdapter adapter;
     //SubCategories
     private Prenda prendas[] = new Prenda[]
             {
@@ -36,10 +38,8 @@ public class ShoppingCartFragment extends Fragment implements AdapterView.OnItem
                     new Prenda( "Polo con cuello", R.drawable.lead_photo_10, "Camisero modelo pepito", 20, 10, "Azul marino", 2 ),
             };
 
-    //Button
-    private Button realizarPagoCarrito;
 
-    public ShoppingCartFragment()
+    public ShoppingHistoryFragment()
     {
         // Required empty public constructor
     }
@@ -56,18 +56,14 @@ public class ShoppingCartFragment extends Fragment implements AdapterView.OnItem
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_shopping_cart, container, false);
+        View root = inflater.inflate(R.layout.fragment_shopping_history, container, false);
 
         //Instanciamos el gridview
-        shoppingCartListView = (ListView)root.findViewById( R.id.shoppingCartListView );
+        shoppingHistoryListView = (ListView)root.findViewById( R.id.shoppingHistoryListView );
         //Adapter
-        adapter = new ItemShoppingCartAdapter( getContext(), prendas );
-        shoppingCartListView.setAdapter( adapter );
-        shoppingCartListView.setOnItemClickListener(this);
-
-        //Button
-        realizarPagoCarrito = (Button)root.findViewById( R.id.realizarPagoCarritoButton );
-        realizarPagoCarrito.setOnClickListener(this);
+        adapter = new ItemShoppingHistoryAdapter( getContext(), prendas );
+        shoppingHistoryListView.setAdapter( adapter );
+        shoppingHistoryListView.setOnItemClickListener( this );
 
         return root;
     }
@@ -78,30 +74,6 @@ public class ShoppingCartFragment extends Fragment implements AdapterView.OnItem
 
     }
 
-    @Override
-    public void onClick(View v)
-    {
-        String title="";
-        //Fragment
-        Fragment fragment = null;
-        boolean fragmentTransaction = false;
 
-        switch( v.getId() )
-        {
-            case R.id.realizarPagoCarritoButton:
-                fragment = new PayFragment();
-                title = PayFragment.title;
-                fragmentTransaction = true;
-                break;
-        }
-
-        if( fragmentTransaction )
-        {
-            //Cambiamos de fragment
-            ( (AppCompatActivity)getActivity() ).getSupportFragmentManager().beginTransaction().replace( R.id.content_frame_of_fragments, fragment ).addToBackStack( title ).commit();
-            ( (AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(title);
-        }
-
-    }
 
 }
